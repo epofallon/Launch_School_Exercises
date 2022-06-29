@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Staff</title>
+    <link rel="stylesheet" href="adding_schedules.css">
+  </head>
+  <body>
+    <button id="add-schedule">Add more schedules</button>
+    <form id="add-staff-form" method="post" action="/api/staff_members">
+      <fieldset>
+        <legend>Schedule 1</legend>
+          <label for="name-select">Staff Name</label>
+          <select name="name-select" id="name-select"></select><br>
+          <label for="date">Date</label>
+          <input type="text" id="date" name="date" placeholder="mm-dd-yyyy"><br>
+          <label for="time">Time</label>
+          <input type="text" id="time" name="time" placeholder="hh:mm"><br>
+      </fieldset>
+      
+
+      <input type="submit"></input>
+    </form>
+    <script src="adding_schedules.js"></script>
+  </body>
+</html>

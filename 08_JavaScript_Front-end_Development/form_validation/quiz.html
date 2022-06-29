@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Multiple Choice Quiz</h1>
+    <form action="#" method="post" novalidate>
+      <p class="form_errors"></p>
+      <a href="#" class="submit">Submit Quiz</a>
+      <a href="#" class="reset_form disabled">Reset</a>
+    </form>
+  </div>
+
+  <script id="questions" type="text/x-handelbars-template">
+    <fieldset>
+      {{#each this}}
+        {{> question}}
+      {{/each}}
+    </fieldset>
+  </script>
+  
+  <script id="question" type="text/x-handelbars-template" data-type="partial">
+    <div class="question" data-id="{{id}}">
+      <p class="description">Q{{id}}. {{{description}}}</p>
+      {{#each options}}
+        <label>
+          <input type="radio" name="{{../id}}" value="{{this}}"> {{this}}
+        </label>
+      {{/each}}
+      <p class="result"></p>
+    </div>
+  </script>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

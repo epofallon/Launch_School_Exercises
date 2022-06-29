@@ -1,0 +1,84 @@
+/*
+----------------------------------------
+Tantek Celik's Whitepsace Reset
+     Author:    Tantek Celik, Shane Riley
+    Version:    (CC) 2010 Some Rights Reserved - http://creativecommons.org/licenses/by/2.0
+Description:  Resets default styling of common browsers to a common base
+----------------------------------------
+*/
+
+ul,ol { list-style: none; }
+h1,h2,h3,h4,h5,h6,pre,code { font-size: 1em; }
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input,dl,dt,dd, figure, figcaption {
+  margin: 0;
+  padding: 0; }
+a img,:link img,:visited img, fieldset { border: none; }
+address { font-style: normal; }
+header, section, article, nav, footer, hgroup, details, summary, figure, main { display: block; }
+mark {
+  color: inherit;
+  background: transparent; }
+abbr { border: none; }
+summary::-webkit-details-marker { display: none; }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee9ce;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.wrapper {
+  width: 600px;
+  margin: 20px auto;
+}
+
+form {
+  margin: 30px 0 0 0;
+}
+
+label {
+  display: block;
+  margin-top: 5px;
+}
+
+.question {
+  margin: 0 0 10px 0;
+}
+
+.question .description {
+  margin: 0 0 10px 0;
+}
+
+.submit, .reset_form{
+  background: transparent;
+  padding: 5px 15px;
+  background: #55ec39;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+a.disabled {
+  background: #ccc;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 10px;
+  height: 35px;
+  padding: 5px;
+}
+
+.result.correct {
+  border: 1px solid green;
+}
+
+.result.wrong {
+  border: 1px solid red;
+}

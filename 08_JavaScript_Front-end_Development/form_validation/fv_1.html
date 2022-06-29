@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation 1</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <h1>Sign Up Form</h1>
+  <form action="#" method="post" novalidate>
+    <p class="form_errors"></p>
+    <fieldset>
+      <dl>
+        <dt><label for="first_name">First Name</label></dt>
+        <dd><input type="text" name="first_name" id="first_name" required></dd>
+        <span class="error_message"></span>
+
+        <dt><label for="last_name">Last Name</label></dt>
+        <dd><input type="text" name="last_name" id="last_name" required></dd>
+        <span class="error_message"></span>
+
+        <dt><label for="email">Email</label></dt>
+        <dd><input type="email" name="email" id="email" placeholder="someone@email.com" required pattern=".+@.+"></dd>
+        <span class="error_message"></span>
+
+        <dt><label for="password">Password</label></dt>
+        <dd><input type="password" name="password" id="password" required minlength="10"></dd>
+        <span class="error_message"></span>
+
+        <dt><label for="phone">Phone Number</label></dt>
+        <dd><input type="tel" name="phone" id="phone" placeholder="555-555-5555" pattern="^(\d{3}-){2}\d{4}$"></dd>
+        <span class="error_message"></span><br>
+
+        <dt><label for="card_number">Credit Card</label></dt>
+        <dd>
+          <input type="text" name="card_number" id="cd1" maxlength="4" minlength="4" required> <span>-</span>
+          <input type="text" name="card_number" id="cd2" maxlength="4"  minlength="4" required> <span>-</span>
+          <input type="text" name="card_number" id="cd3" maxlength="4"  minlength="4" required> <span>-</span>
+          <input type="text" name="card_number" id="cd4" maxlength="4"  minlength="4" required>
+        </dd>
+        <span></span><br>
+        
+        <button type="submit">Sign Up</button>
+      </dl>
+    </fieldset>
+  </form>
+
+  <blockquote id="form_data" hidden></blockquote>
+
+  <script src="app.js"></script>
+</body>
+</html>

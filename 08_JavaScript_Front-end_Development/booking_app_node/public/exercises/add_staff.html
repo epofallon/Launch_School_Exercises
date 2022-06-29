@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Staff</title>
+    <link rel="stylesheet" href="adding_schedules.css">
+  </head>
+  <body>
+    <form id="add-staff-form" method="post" action="/api/staff_members">
+      <dl>
+        <dt>
+          <label for="email">Email</label>
+        </dt>
+        <dd>
+          <input name="email" id="email" type="email">
+        </dd>
+        <dt>
+          <label for="name">Name</label>
+        </dt>
+        <dd>
+          <input type="text" id="name" name="name">
+        </dd>
+      </dl>
+      <input type="submit"></input>
+    </form>
+    <script src="add_staff.js"></script>
+  </body>
+</html>
